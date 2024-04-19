@@ -1,9 +1,11 @@
 # Blog de Notícias – Projeto com Framework Django
 ### [Squad Hady Lamarr & Margaret Hamilton](https://github.com/Hedy-Lamarr-e-Margaret-Hamilton)
 
-O **Blog de Notícias** é uma plataforma desenvolvida utilizando **Python** e o **framework Django** para oferecer aos usuários uma experiência completa de leitura e interação com notícias. O projeto fornece funcionalidades para autores e editores, e permite publicação, navegação, gerenciamento de conteúdo e busca de notícias.
+O **Blog de Notícias** é uma plataforma desenvolvida utilizando **Python** e o **framework Django** para oferecer aos usuários uma experiência completa de leitura e interação com notícias. O projeto fornece funcionalidades para autores e editores, e permite publicação, navegação, gerenciamento de conteúdo e busca de notícias. O projeto foi elaborado em abril de 2024.
 
-Código desenvolvido como projeto final para o **Bootcamp Python e Django** da **WoMakersCode**, patrocinado pelo **iFood** e pela **Microsoft**.
+A documentação da organização do grupo pode ser encontrada [aqui](https://docs.google.com/document/d/1lIIk6zF5jKVBLpP89OXqIScTDsRCjyLqBIv6435GKlA/edit). Clique [aqui](https://www.canva.com/design/DAGBw5oO2-k/83OCW3v4koj8nORli-Hneg/edit?utm_content=DAGBw5oO2-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) e assista a apresentação.
+
+Código desenvolvido como projeto final para o bootcamp **Back-end Python e Django** da **WoMakersCode**, patrocinado pelo **iFood** e pela **Microsoft**.
 
 ---
 
