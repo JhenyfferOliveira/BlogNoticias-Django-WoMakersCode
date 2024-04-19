@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block title %}HOME{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<main>
+    <div class="container-fluid">
+        <!--Seção para manchetes-->
+        <section>
+            <div class="row">
+                <!--Coluna das duas primeiras manchetes-->
+                {% for noticia in noticias_urgentes|slice:":2"  %}
+                        <div class="col-xs-12 col-md-6 top-row">
+                            <a href="/noticia/id/{{noticia.id}}">
+                                <img class="imagem-manchete" src="{{noticia.imagem}}" alt="">
+                            </a>
+                                <div class="texto-destaque">
+                                    <a href="/{{noticia.categoria | lower}}/">
+                                        <p class="categoria">{{noticia.categoria}}</p>
+                                    </a>
+                                    <a href="/noticia/id/{{noticia.id}}">
+                                    <h5>{{ noticia.titulo }}</h5>
+                                    </a>
+                                    <p class="text-color">{{noticia.data}}</p>
+                                </div>
+                            </a>
+                        </div>
+                {% endfor %}
+
+                <!--Segunda coluna das manchetes-->
+                {% for noticia in noticias_urgentes|slice:"2:6" %}
+                        <div class="col-xs-12 col-md-3 bottom-row">
+                            <a href="/noticia/id/{{noticia.id}}">
+                                <img class="imagem-manchete" src="{{noticia.imagem}}" alt="">
+                            </a>
+                                <div class="texto-destaque">
+                                    <a href="/{{noticia.categoria | lower}}/">
+                                        <p class="categoria">{{noticia.categoria}}</p>
+                                    </a>
+                                    <a href="/noticia/id/{{noticia.id}}">
+                                        <h5>{{ noticia.titulo }}</h5>
+                                    </a>
+                                    <p class="text-color">{{noticia.data}}</p>
+                                </div>
+                            </a>
+                        </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!--Seção para últimas notícias-->
+        <section>
+            <h1>Últimas notícias</h1>
+            <h6>Notícias, fotos, vídeos e reportagens especiais</h6>
+            <div class="row section-latest-news">
+                {% for noticia in ultimas_noticias %}
+                <div class="col-xs-12 col-md-5 bottom-row">
+                    <a href="/noticia/id/{{noticia.id}}">
+                        <img class="img_destaques" src="{{noticia.imagem}}" alt="">
+                        <h3>{{ noticia.titulo }}</h3>
+                        <p>{{noticia.data}}</p>
+                    </a>
+                </div>
+                {% endfor %}
+
+                <!--Sidebar-->
+                <div class="col-xs-12 col-md-2 sidebar">
+                    <h5>Assuntos do momento</h5>
+                    <div class="text-center div-trending-topics" id="div-trending-topics-tecnologia">
+                        <a href="/noticia/categoria/Tecnologia" class="text-trending-topics">Tecnologia</a>
+                    </div>
+                    <div class="text-center div-trending-topics" id="div-trending-topics-politica">
+                        <a href="/noticia/categoria/Politica" class="text-trending-topics">Política</a>
+                    </div>
+                    <div class="text-center div-trending-topics" id="div-trending-topics-economia">
+                        <a href="/noticia/categoria/Economia" class="text-trending-topics">Economia</a>
+                    </div>
+                    <div class="text-center div-trending-topics" id="div-trending-topics-cultura">
+                        <a href="/noticia/categoria/Cultura" class="text-trending-topics">Cultura</a>
+                    </div>
+                    <div class="text-center div-trending-topics" id="div-trending-topics-esportes">
+                        <a href="/noticia/categoria/Esporte" class="text-trending-topics">Esportes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+
+{% endblock %}

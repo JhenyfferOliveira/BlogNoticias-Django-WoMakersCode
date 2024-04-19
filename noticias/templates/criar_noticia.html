@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container-form">
+  <h1 class="text-body-emphasis">Notícia</h1>
+
+  {% if sucesso %}
+    <p class="alert alert-success">Notícia criada com sucesso!</p>
+  {% endif %}
+
+  <form action="" method="POST" id="form" class="form-styled">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn btn-primary btn-block">Inserir Notícia</button>
+  </form>
+</div>
+
+<style>
+
+  #form input[type="text"],
+  #form input[type="email"],
+  #form input[type="password"],
+  #form textarea,
+  #form select {
+    width: 100%;
+  }  
+  .container-form {
+    max-width: 600px; 
+    margin: 5% auto; 
+    padding: 2rem;
+    border-radius: 0.5rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+
+  
+  .text-body-emphasis {
+    text-align: center; 
+    margin-bottom: 1rem; 
+  }
+
+  /* Success message */
+  .alert-success {
+    color: #28a745; 
+    background-color: #dff0d8; 
+    border-color: #d4e7da; 
+  }
+
+  /* Form styling */
+  .form-styled {
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  .form-styled label {
+    margin-bottom: 0.5rem; 
+    font-weight: bold;
+  }
+
+  .form-styled input,
+  .form-styled textarea {
+    padding: 0.75rem; 
+    border: 1px solid #ccc; 
+    border-radius: 0.25rem; 
+  }
+
+  .form-styled button {
+    margin-top: 1rem; 
+    background-color: #F4DFFF; 
+    border-color: #F4DFFF; 
+    color: #393939; 
+  }
+
+  .form-styled button:hover {
+    background-color: #B269DD; 
+    border-color: #B269DD;
+  }
+
+  .input-maior {
+  width: 300px;
+}
+</style>
+
+{% endblock %}

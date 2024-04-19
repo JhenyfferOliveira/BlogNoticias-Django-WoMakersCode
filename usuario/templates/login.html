@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+<style>
+  .alert.alert-danger {
+    padding: 1px 1px 1px 1px;
+    display: flex;
+    height: auto; 
+  }
+  #form input[type="text"],
+  #form input[type="email"],
+  #form input[type="password"],
+  #form textarea,
+  #form select {
+    width: 100%;
+  }
+</style>
+  <section>
+    <div class="row justify-content-md-center">
+      <div class="col-md-4">
+        <h1 class="text-body-emphasis" align="center">Login</h1>
+        <br>
+        <form action="." method="POST" id="login-form" novalidate>
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          {% if form.errors.email %}
+            <div class="alert alert-danger">{{ form.errors.email }}</div>
+          {% endif %}
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" required>
+          </div>
+          {% if form.errors.senha %}
+            <div class="alert alert-danger">{{ form.errors.senha }}</div>
+          {% endif %}
+          <button type="submit" class="btn btn btn-primary btn-block" style="background-color: #B269DD;">Login</button>
+        </form>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}Painel de notícias{% endblock %} 
+
+{% block content %}
+  <h1 class="text-body-emphasis">Painel de Notícias</h1>
+  <br>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="white-space: nowrap;">
+            <a href="{% url 'usuario:login' %}" class="btn btn-primary" style="margin-right: 5px; background-color: #F4DFFF; border-color: #F4DFFF ; color: #393939;">Encerrar Sessão</a>
+          </th>
+        </tr>
+        <tr>
+          <th>Título</th>
+          <th>Categoria</th>
+          <th>Destaque</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for noticia in noticias %}
+          <tr>
+            <td>{{ noticia.titulo }}</td>
+            <td>{{ noticia.categoria }}</td>
+            <td>{{ noticia.destaque }}</td>
+            <td>{{ noticia.status }}</td>
+            <td>
+              <a href="{% url 'noticias:aprovar_noticia' id_noticia=noticia.id %}" class="btn btn-success btn-sm">Aprovar</a>
+              <a href="{% url 'noticias:reprovar_noticia' id_noticia=noticia.id %}" class="btn btn-danger btn-sm">Reprovar</a>
+            <td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

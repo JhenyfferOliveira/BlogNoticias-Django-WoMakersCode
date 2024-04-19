@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style>
+  #form input[type="text"],
+  #form input[type="email"],
+  #form input[type="password"],
+  #form textarea,
+  #form select {
+    width: 100%;
+  }
+</style>
+
+<section>
+  <div class="row justify-content-md-center">
+    <div class="col-md-4">
+
+  <h1 class="text-body-emphasis" style="text-align: center;">Criar Usuário</h1>
+
+  {% if sucesso %}
+    <p class="alert alert-success">Usuário criado com sucesso!</p>
+  {% endif %}
+
+  <form action="" method="POST" id="form">
+    {% csrf_token %}
+    {% for field in form %}
+    <div class="mb-3">
+      <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+      <div style="width: 100%;">
+        {{ field }}
+      </div>
+    </div>
+  {% endfor %}
+    <button type="submit" class="btn btn-primary btn-block" style="background-color: #B269DD;">Inserir usuário</button>
+  </form>
+</div>
+</div>
+</section>
+
+{% endblock %}

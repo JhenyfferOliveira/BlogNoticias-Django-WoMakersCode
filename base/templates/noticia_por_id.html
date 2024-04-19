@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block title %}{{ noticia.categoria }}{% endblock %}
+{% block content %}
+
+<main>
+    <div class="container-fluid">
+        <section>
+            <div class="">
+                <h1 align="center">{{ noticia.titulo }}</h1>
+                <br>
+                <img class="imagem-manchete img-fluid mx-auto" src="{{ noticia.imagem }}" alt="{{ noticia.titulo }}" style="max-width: 70%; height: auto; display: block;">
+                <h5 align="center">Data: {{ noticia.data }}</h5>
+                <br>
+                <p>{{ noticia.conteudo }}</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+{% endblock %}

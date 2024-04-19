@@ -1,0 +1,66 @@
+.navbar-first {
+    background-color: #B269DD;
+    height: 2.5rem;
+}
+
+/* Navbar do logo */
+.navbar-second {
+    border-color: #B269DD;
+    border-style:solid;
+    border-width: 3px 0;
+    height:max-content;
+    padding: 2rem;
+    background-color: f6f6f6;
+}
+
+.logo {
+    left: 50%;
+}
+
+.form-inline {
+    flex-flow: nowrap;
+}
+
+#search-input {
+    border-color: #B269DD;
+    margin-right:4%;
+}
+
+#search-submit {
+    background-color: #B269DD;
+    border-style:solid;
+    border-width: 3px 0;
+    border-color: #B269DD;
+    color: #f4dfff;
+    padding: 0.1rem 0.5rem;
+}
+
+/* Navbar das categorias*/
+.navbar-third {
+    border: solid grey;
+    border-width: 0  0 1px 0 ;
+    align-items:center;
+    padding: 1rem 0;
+}
+
+@media (max-width: 767.98px) {
+    .navbar-third {
+        border: 0;
+    }
+}
+
+.nav-about {
+    list-style-type: none;
+    align-self: flex-end;
+    color: #212529;     
+}
+
+.nav-link-about{
+    color: rgba(0,0,0,.5);
+}
+
+.nav-link-about:hover {
+    color: black;
+}
+
+

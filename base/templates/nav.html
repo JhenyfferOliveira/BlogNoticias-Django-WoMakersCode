@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-first"></nav>
+<nav class="navbar navbar-expand-lg navbar-light navbar-second">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/static/images/logo.png" height="100" alt="logo">
+      </a>
+    </ul>
+    
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" style="margin-right: 5px; background-color: #F4DFFF; border-radius: 10px;">
+          <a class="nav-link" href="{% url 'usuario:login' %}">Login</a>
+      </li>
+      <li class="nav-item" style="margin-right: 5px; background-color: #F4DFFF; border-radius: 10px;">
+          <a class="nav-link" href="{% url 'usuario:criar_usuario' %}">Criar Usuário</a>
+      </li>
+  </ul>
+    
+      <form action="{% url 'pesquisar_noticias' %}" method="POST" role="search" class="form-inline my-2 my-lg-0">
+        {% csrf_token %}
+        <input class="form-control  mr-sm-2" type="search" name="search_query" id="search-input" placeholder="Buscar" aria-label="Search">
+        <button class="btn my-2 my-sm-0" id="search-submit" type="submit"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="23" height="23" viewBox="0,0,256,256">
+          <g fill="#520914" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M21,3c-9.39844,0 -17,7.60156 -17,17c0,9.39844 7.60156,17 17,17c3.35547,0 6.46094,-0.98437 9.09375,-2.65625l12.28125,12.28125l4.25,-4.25l-12.125,-12.09375c2.17969,-2.85937 3.5,-6.40234 3.5,-10.28125c0,-9.39844 -7.60156,-17 -17,-17zM21,7c7.19922,0 13,5.80078 13,13c0,7.19922 -5.80078,13 -13,13c-7.19922,0 -13,-5.80078 -13,-13c0,-7.19922 5.80078,-13 13,-13z"></path></g></g>
+          </svg></button>
+        
+      </form>
+    
+  </div>
+</nav>

@@ -1,0 +1,147 @@
+html,
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+section {
+    height:fit-content;
+    margin-bottom: 4%;
+}
+
+img {
+    border-radius: 2%;
+}
+
+a {
+    color: #B269DD; 
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f4dfff; 
+}
+
+.container-fluid {
+    padding: 6%;
+}
+
+.row {
+    padding-top: 12px;
+}
+
+.top-row {
+    padding-bottom: 12px;
+    
+}
+
+.bottom-row {
+    padding-top: 12px;
+    
+}
+
+.text-color {
+    color: #B269DD; 
+}
+
+.categoria {
+    background-color: #B269DD;
+    color: aliceblue;
+    text-align: left;
+    width: fit-content;
+    padding: 0 10px;
+}
+
+/* Seção manchetes */
+
+.imagem-manchete {
+    width: 100%;
+    height: auto;
+}
+
+/* Seção últimas notícias */
+.img_destaques {
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+  
+.texto-destaque {
+    padding: 10px 0; 
+    text-align: left;
+    width:90%;
+}
+
+.section-latest-news {
+    position:relative;
+}
+
+/* Sidebar */
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+  }
+
+@media (max-width: 992px) {
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+}
+
+.div-trending-topics {
+    filter: brightness(30%);
+    filter: contrast(90%);
+    border-radius: 3%;
+    height: 4rem;
+    max-width: 200px;
+    min-width: 100px;
+    margin-bottom: 1rem;
+    display:grid;
+}
+
+.text-trending-topics {
+    font-weight: bold;
+    font-size: bold;
+    color: white;
+    padding: 10%;
+}
+
+.text-trending-topics:hover {
+    color: white;
+}
+
+#div-trending-topics-tecnologia {
+    background-image: url("/static/images/tecnologia.jpg");
+    background-position: center left; 
+    background-size: cover;
+}
+
+#div-trending-topics-politica {
+    background-image: url("/static/images/politica.jpg");
+    background-position: center left; 
+    background-size: cover;
+}
+
+#div-trending-topics-economia {
+    background-image: url("/static/images/economia.jpg");
+    background-position: center left; 
+    background-size: cover;
+}
+
+#div-trending-topics-cultura {
+    background-image: url("/static/images/cultura.jpg");
+    background-position: center left; 
+    background-size: cover;
+}
+
+#div-trending-topics-esportes {
+    background-image: url("/static/images/esportes.jpg");
+    background-position: center left; 
+    background-size: cover;
+}

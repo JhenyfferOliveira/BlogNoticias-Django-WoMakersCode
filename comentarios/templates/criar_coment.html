@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1 class="text-body-emphasis">Comentários</h1>
+
+    {% if sucesso %}
+      <p class="alert alert-success">Comentário criado com sucesso!</p>
+    {% endif %}
+
+  <form action="" method="POST" id="form"> 
+    {% csrf_token %}
+    {{ form.as_p}}
+
+    <button type="submit" class="btn btn-primary btn-block">Inserir comentário</button> 
+
+  </form>
+
+{% endblock %}

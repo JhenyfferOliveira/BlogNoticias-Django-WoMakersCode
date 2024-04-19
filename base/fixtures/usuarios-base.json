@@ -1,0 +1,83 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 20,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$LIoVHuZQGoIl84FxAo4EZF$qfuzxZcMqkBdLEg4GEXi5g5idzY0qYR0vHUGe3kvDn8=",
+      "last_login": "2024-04-05T13:44:23.890Z",
+      "is_superuser": false,
+      "username": "luiza.editora",
+      "first_name": "Luiza",
+      "last_name": "Editora",
+      "email": "luiza.editora@blognoticia.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-04-05T13:18:30Z",
+      "groups": [2],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 21,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$CXq2RNs7fkQiBo3Ed6ryPV$ZLZe3ThKak49ClnWcP4CSaKAj4PbuYxJuNvxVxIsN+E=",
+      "last_login": "2024-04-05T13:45:00.645Z",
+      "is_superuser": false,
+      "username": "carolina.escritora",
+      "first_name": "Carolina",
+      "last_name": "Escritora",
+      "email": "carolina.editora@blognoticia.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-04-05T13:19:47Z",
+      "groups": [3],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$Y5H56moEQjp2cuqYF1PZj8$lQ7VVXUItqpIFS+FXpUtLRQxHLaIC3szCJoLYVd+RWg=",
+      "last_login": "2024-04-05T13:45:35.697Z",
+      "is_superuser": true,
+      "username": "erica.master",
+      "first_name": "Erica",
+      "last_name": "Master",
+      "email": "erica.master@blognoticia.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-04-05T13:22:44Z",
+      "groups": [1],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "Master",
+      "permissions": [
+        1, 2, 3, 4, 9, 10, 11, 12, 5, 6, 7, 8, 13, 14, 15, 16, 25, 26, 27, 28,
+        17, 18, 19, 20, 33, 34, 35, 36, 21, 22, 23, 24
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "Editora",
+      "permissions": [28, 33, 34, 35, 36]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 3,
+    "fields": {
+      "name": "Escritora",
+      "permissions": [33, 34, 36]
+    }
+  }
+]
